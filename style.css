@@ -1,0 +1,67 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-rows: 1fr 6fr 1fr;
+}
+
+.turn {
+    grid-row: 1 /2 ;
+    grid-column: 2 / 4;   /* esta linea se asocia al grid del container */
+    font-size: 2rem;
+}
+
+.board {
+    grid-column-start: 2;   /* esta linea se asocia al grid del container */
+    grid-row-start: 2;      /* esta linea se asocia al grid del container */
+    display: grid;
+    height: 500px;
+    width: 500px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: 1px solid black;
+    gap: 2px;
+    padding: 2px;
+    background-color: yellow;
+  }
+  
+  .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    border: 1px solid grey;
+    background: lightyellow;
+    cursor: pointer;
+  }
+
+
+.result {
+    grid-row-start: 3;      /* esta linea se asocia al grid del container */
+    grid-column: 1 / 4;      /* esta linea se asocia al grid del container */
+    display: grid ;
+    grid-template-columns: 1fr 6fr 1fr;
+}
+
+.resultButton {
+    grid-column-start: 1 / 2;      /* esta linea se asocia al grid del result*/    
+}
+
+.resultMessage {
+    grid-column-start: 2 / 4;      /* esta linea se asocia al grid del result*/    
+    font-size: 2rem ;
+    font-weight: 600;
+}
+
+.resetButton { 
+     
+    color: black; line-height: 13px; padding: 15px; 
+    border-radius: 10px; font-family: Georgia, serif; font-weight: normal; text-decoration: none;
+    font-style: normal; font-variant: normal; text-transform: none; 
+    background-image: linear-gradient(to right, rgb(105,117,142) 0%, rgb(214,217,225) 100%) ; 
+    box-shadow: #edeef1 2px 2px 4px 2px; border: 2px solid #353945; display: inline-block;
+}
+.resetButton:hover {
+    background: #545e75; color: white; }
+.resetButton:active {
+    background: #454d5f; color: white; }
